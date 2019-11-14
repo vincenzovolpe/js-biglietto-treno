@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-#messaggio, #notnumber, #notpositive{
+#messaggio, #kmnotnumber, #kmnotpositive, #etanotnumber, #etanotpositive{
     display: none;
 }
 
@@ -22,7 +22,7 @@
     color: blue;
 }
 
-#notnumber.visibile, #notpositive.visibile{
+#kmnotnumber.visibile, #kmnotpositive.visibile, #etanotnumber.visibile, #etanotpositive.visibile{
     display: block;
     color: red;
 }
