@@ -9,13 +9,13 @@ const sconto40 = 40; //sconto 40% per pensionati (> 65 anni)
 var kmetri = prompt('Quanti chilometri vuoi percorrere?');
 
 // Calcolo del costo del biglietto intero
-var costobigliettointero = Math.round((kmetri * costoperkm));
+var costobigliettointero = (kmetri * costoperkm).toFixed(2);
 
 // Calcolo del costo del biglietto scontato del 20%
-var costobiglietto20 = Math.round((costobigliettointero - (costobigliettointero * (sconto20 / 100))));
+var costobiglietto20 = (costobigliettointero - (costobigliettointero * (sconto20 / 100))).toFixed(2);
 
 // Calcolo del costo del biglietto scontato del 40%
-var costobiglietto40 = Math.round((costobigliettointero - (costobigliettointero * (sconto40 / 100))));
+var costobiglietto40 = (costobigliettointero - (costobigliettointero * (sconto40 / 100))).toFixed(2);
 
 
 // Controllo km inseriti ed richiesta e controllo età del cliente e stampa relativo messaggio di costo del biglietto
@@ -33,9 +33,9 @@ if (isNaN(kmetri)) {
         if (eta >= 18 && eta <= 65) {
             alert("Il costo del tuo biglietto è di Euro: " + costobigliettointero);
         } else if (eta < 18){
-            alert("Il costo del tuo biglietto è di Euro: " + costobiglietto20);
+            alert("Il costo del tuo biglietto è di Euro (scontato del 20%): " + costobiglietto20);
         } else {
-            alert("Il costo del tuo biglietto è di Euro: " + costobiglietto40);
+            alert("Il costo del tuo biglietto è di Euro (scontato del 40%): " + costobiglietto40);
         }
     }
 }
