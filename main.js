@@ -9,13 +9,14 @@ const sconto20 = 20; //sconto 20% per minorenni (< 18 anni)
 const sconto40 = 40; //sconto 40% per pensionati (> 65 anni)
 
 // Calcolo del costo del biglietto intero
-var costobigliettointero = kmetri * costoperkm;
+var costobigliettointero = Math.round((kmetri * costoperkm));
+
 
 // Calcolo del costo del biglietto scontato del 20%
-var costobiglietto20 = (costobigliettointero - (costobigliettointero * (sconto20 / 100)));
+var costobiglietto20 = Math.round((costobigliettointero - (costobigliettointero * (sconto20 / 100))));
 
 // Calcolo del costo del biglietto scontato del 40%
-var costobiglietto40 = (costobigliettointero - (costobigliettointero * (sconto40 / 100)));
+var costobiglietto40 = Math.round((costobigliettointero - (costobigliettointero * (sconto40 / 100))));
 
 
 // Controllo km inseriti ed età del cliente e stampa relativo messaggio di costo del biglietto
