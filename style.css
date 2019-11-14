@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mostra {
+    display: flex;
+    height: 100vh;
+    background-color: aqua;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#messaggio, #notnumber, #notpositive{
+    display: none;
+}
+
+#messaggio.visibile {
+    display: block;
+    color: blue;
+}
+
+#notnumber.visibile, #notpositive.visibile{
+    display: block;
+    color: red;
+}
