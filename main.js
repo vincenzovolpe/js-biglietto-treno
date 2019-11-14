@@ -1,10 +1,6 @@
 // Richiesta km da percorrere e  età all'utente
 var kmetri = prompt('Quanti chilometri vuoi percorrere?');
 
-
-
-var eta = prompt('Quanti anni hai?');
-
 // Costo del biglietto al km
 const costoperkm = 0.21;
 
@@ -15,7 +11,6 @@ const sconto40 = 40; //sconto 40% per pensionati (> 65 anni)
 // Calcolo del costo del biglietto intero
 var costobigliettointero = kmetri * costoperkm;
 
-
 // Calcolo del costo del biglietto scontato del 20%
 var costobiglietto20 = (costobigliettointero - (costobigliettointero * (sconto20 / 100)));
 
@@ -24,16 +19,23 @@ var costobiglietto40 = (costobigliettointero - (costobigliettointero * (sconto40
 
 
 // Controllo età del cliente e relativo messaggio di costo del biglietto
-if (isNaN(eta)) {
+if (isNaN(kmetri)) {
     alert("Il valore inserito non è numerico");
-} else if (! (eta > 0 )) {
+} else if (! (kmetri > 0 )) {
     alert("Il valore inserito è un numero negativo");
 } else {
-    if (eta >= 18 && eta <= 65) {
-        alert("Il costo del tuo biglietto è di Euro: " + costobigliettointero);
-    } else if (eta < 18){
-        alert("Il costo del tuo biglietto è di Euro: " + costobiglietto20);
+    var eta = prompt('Quanti anni hai?');
+    if (isNaN(eta)) {
+        alert("Il valore inserito non è numerico");
+    } else if (! (eta > 0 )) {
+        alert("Il valore inserito è un numero negativo");
     } else {
-        alert("Il costo del tuo biglietto è di Euro: " + costobiglietto40);
+        if (eta >= 18 && eta <= 65) {
+            alert("Il costo del tuo biglietto è di Euro: " + costobigliettointero);
+        } else if (eta < 18){
+            alert("Il costo del tuo biglietto è di Euro: " + costobiglietto20);
+        } else {
+            alert("Il costo del tuo biglietto è di Euro: " + costobiglietto40);
+        }
     }
 }
