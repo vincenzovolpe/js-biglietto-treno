@@ -18,7 +18,7 @@ var costobiglietto20 = (costobigliettointero - (costobigliettointero * (sconto20
 var costobiglietto40 = (costobigliettointero - (costobigliettointero * (sconto40 / 100)));
 
 
-// Controllo età del cliente e relativo messaggio di costo del biglietto
+// Controllo km inseriti ed età del cliente e stampa relativo messaggio di costo del biglietto
 if (isNaN(kmetri)) {
     alert("Il valore inserito non è numerico");
 } else if (! (kmetri > 0 )) {
