@@ -1,4 +1,4 @@
-// Costo del biglietto al km
+// Costo del biglietto per km
 const costoperkm = 0.21;
 
 // Percentuali di sconto dei biglietti
@@ -31,11 +31,14 @@ if (isNaN(kmetri)) {
         alert("Il valore inserito è un numero negativo");
     } else {
         if (eta >= 18 && eta <= 65) {
-            alert("Il costo del tuo biglietto è di Euro: " + costobigliettointero);
+            //alert("Il costo del tuo biglietto è di Euro: " + costobigliettointero);
+            document.writeln("Il costo del tuo biglietto è di Euro: " + costobigliettointero);
         } else if (eta < 18){
-            alert("Il costo del tuo biglietto è di Euro (scontato del 20%): " + costobiglietto20);
+            //alert("Il costo del tuo biglietto è di Euro (scontato del 20%): " + costobiglietto20);
+            document.writeln("Il costo del tuo biglietto è di Euro: " + costobiglietto20);
         } else {
-            alert("Il costo del tuo biglietto è di Euro (scontato del 40%): " + costobiglietto40);
+            //alert("Il costo del tuo biglietto è di Euro (scontato del 40%): " + costobiglietto40);
+            document.writeln("Il costo del tuo biglietto è di Euro: " + costobiglietto40);
         }
     }
 }
